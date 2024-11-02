@@ -4,7 +4,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import '../models/plan_model.dart';
 import '../services/purchase_service.dart';
 import '../core/storage/xboard_cache_manager.dart';
-// lib/features/panel/xboard/viewmodels/dialog_viewmodel/payment_methods_viewmodel.dart
 import 'package:flutter/foundation.dart';
 import 'package:hiddify/features/panel/xboard/providers/index.dart';
 
