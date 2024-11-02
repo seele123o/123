@@ -6,9 +6,6 @@ import '../services/purchase_service.dart';
 import '../core/storage/xboard_cache_manager.dart';
 // lib/features/panel/xboard/viewmodels/dialog_viewmodel/payment_methods_viewmodel.dart
 import 'package:flutter/foundation.dart';
-//import '../../models/payment_process_state.dart';
-//import '../../services/payment/payment_system.dart';
-//import '../../services/http_service/order_service.dart';
 import 'package:hiddify/features/panel/xboard/providers/index.dart';
 
 class PurchaseViewModel extends ChangeNotifier {
