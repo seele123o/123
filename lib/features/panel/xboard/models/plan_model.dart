@@ -36,6 +36,8 @@ class Plan {
     this.metadata,
   });
 
+  
+
   factory Plan.fromJson(Map<String, dynamic> json) {
     // 清理 HTML 标签
     final rawContent = json['content'] ?? '';
@@ -171,6 +173,8 @@ class PlanPricing {
   }
 }
 
+
+
 // 支付相关信息模型
 class PlanPaymentInfo {
   final Map<PlanPeriod, Map<PaymentProvider, String>> paymentIds;
@@ -253,6 +257,33 @@ enum PlanPeriod {
     }
   }
 
+  enum PlanSortType {
+  popular,    // 按受欢迎程度排序
+  priceAsc,   // 价格升序
+  priceDesc,  // 价格降序
+  nameAsc,    // 名称升序
+  nameDesc;   // 名称降序
+
+  String get displayName {
+    switch (this) {
+      case PlanSortType.popular:
+        return '推荐';
+      case PlanSortType.priceAsc:
+        return '价格从低到高';
+      case PlanSortType.priceDesc:
+        return '价格从高到低';
+      case PlanSortType.nameAsc:
+        return '名称 A-Z';
+      case PlanSortType.nameDesc:
+        return '名称 Z-A';
+    }
+  }
+
+  bool get isAscending {
+    return this == PlanSortType.priceAsc || this == PlanSortType.nameAsc;
+  }
+}
+  
   String get displayName {
     switch (this) {
       case PlanPeriod.onetime:
